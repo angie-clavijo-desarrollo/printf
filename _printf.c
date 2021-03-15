@@ -14,7 +14,7 @@ int _strlen(char *s)
 int n = 0;
 
 while (*s++ != '\0')
-        n++;
+	n++;
 return (n);
 }
 
@@ -29,40 +29,63 @@ int i = 0, bp, vi;
 void  *vp;
 char *copy; /* se declara una variable como copia de la cadena a imprimir */
 va_list(argumentos);
-        if (*format == '\0')  /*se valida el string de entrada */
-                return (1);
+	if (*format == '\0')  /*se valida el string de entrada */
+		return (1);
 copy = (char *)format; /* se copia la direccion de la cadena de entrada */
 
 va_start(argumentos, format);
 
-        for (; copy[i] != '\0'; copy++)
-        {
-                if (*copy == '%')
-                {
-                        bp = 0;
-                        ++copy;
-                        switch (*copy)
-                        {
+	for (; *copy != '\0'; copy++, i++)
+	{
+		if (*copy == '%')
+		{
+			bp = 0;
+			++copy;
+			switch (*copy)
+			{
 
-                                case 'c':
-                                vp = va_arg(argumentos, int *); /* vp valor a imprimir */
-                                write(1, &vp, 1);
-                                ++copy;
-                                break;
+				case 'c':
+				vp = va_arg(argumentos, int *); /* vp valor a imprimir */
+				write(1, &vp, 1);
+				++copy;
+				break;
 
-                                case 's':
-                                vp = va_arg(argumentos, char *); /* vp valor a imprimir */
-                                bp = _strlen(vp);                /*bp bytes a imprimir */
-                                write(1, vp, bp);
-                                ++copy;
-                                break;
+				case 's':
+				vp = va_arg(argumentos, char *); /* vp valor a imprimir */
+				bp = _strlen(vp);                /*bp bytes a imprimir */
+				write(1, vp, bp);
+				++copy;
+				break;
 
-                        }
-                }
-        write(1, copy, 1);
-        }
+				case 'd':
+				vi = (va_arg(argumentos, int) +'0'); /*vi valor a imprimir del entero */
+				/* printf("%d", vi); */
+				write(1, (&vi), 4);
+				++copy;
+				break;
+
+			case 'i':
+				break;
+
+			}
+		}
+	write(1, copy, 1);
+	}
     va_end(argumentos);
+printf("%d", i);
+return (i);
+}
+
+
+ int main(void)
+{
+char *name, *apellido;
+int  edad = 3;
+name = "Samantha";
+apellido = "Mejia";
+_printf("la edad de %s es %d años %s\n", name, edad, apellido);
 
 return (0);
 }
+
 
