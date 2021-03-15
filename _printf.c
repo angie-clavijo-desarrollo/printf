@@ -57,16 +57,6 @@ va_start(argumentos, format);
                                 ++copy;
                                 break;
 
-                                case 'd':
-                                vi = (va_arg(argumentos, int) +'0'); /*vi valor a imprimir del entero */
-                                /* printf("%d", vi); */
-                                write(1, (&vi), 4);
-                                ++copy;
-                                break;
-
-                        case 'i':
-                                break;
-
                         }
                 }
         write(1, copy, 1);
