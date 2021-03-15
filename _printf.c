@@ -4,18 +4,35 @@
 #include <stdarg.h>
 #include <limits.h>
 
+/**
+ * print_number - print a number with _putchar
+ * @n: the number to print
+ * Return: none
+ */
 void print_number(int n)
 {
 	int i = 0, mod = 0;
-	char numero[8], c;
+	unsigned int num;
+	char numero[8], c, sign;
 
-	for (; n > 0 ; i++)
+	if (n < 0)
 	{
-		mod = n % 10;
-		numero[i] = (char)mod;
-		n /= 10;
+		sign = '-';
+		write(1, &sign, 1);
+		num = -n;
 	}
-	i--;
+	else
+	{
+		num = n;
+	}
+
+	for (; num > 0 ; i++)
+	{
+		mod = num % 10;
+		numero[i] = (char)mod;
+		num /= 10;
+	}
+i--;
 	for (; i >= 0; i--)
 	{
 		c = (numero[i] + '0');
@@ -45,16 +62,16 @@ int _strlen(char *s)
 
 int _printf(const char *format, ...)
 {
-	int i = 0, bp, vi;
+	int i = 0, bp, vi, cprinted = 0;
 	void *vp;
 	char *copy; /* se declara una variable como copia de la cadena a imprimir */
 
 	va_list(argumentos);
-		if (*format == '\0') /*se valida el string de entrada */
-			return (1);
+	if (*format == '\0') /*se valida el string de entrada */
+		return (1);
 	copy = (char *)format; /* se copia la direccion de la cadena de entrada */
 	va_start(argumentos, format);
-	for (; copy[i] != '\0'; copy++)
+	for (; copy[i] != '\0'; copy++, cprinted++)
 	{
 		if (*copy == '%')
 		{
@@ -65,22 +82,26 @@ int _printf(const char *format, ...)
 			case 'c':
 				vp = va_arg(argumentos, int *); /* vp valor a imprimir */
 				write(1, &vp, 1);
+				++cprinted;
 				++copy;
 				break;
 			case 's':
 				vp = va_arg(argumentos, char *); /* vp valor a imprimir */
 				bp = _strlen(vp);				 /*bp bytes a imprimir */
 				write(1, vp, bp);
+				cprinted += bp;
 				++copy;
 				break;
 			case 'd':
 				vi = (va_arg(argumentos, int)); /*vi valor a imprimir del entero */
 				print_number(vi);
+				cprinted += 1; /* revisar */
 				++copy;
 				break;
 			case 'i':
 				vi = (va_arg(argumentos, int)); /*vi valor a imprimir del entero */
 				print_number(vi);
+				cprinted += 1; /* revisar */
 				++copy;
 				break;
 			}
@@ -88,5 +109,6 @@ int _printf(const char *format, ...)
 		write(1, copy, 1);
 	}
 	va_end(argumentos);
-	return (0);
+	/* printf("%d\n", cprinted);*/
+	return (cprinted);
 }
