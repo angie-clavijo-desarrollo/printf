@@ -8,8 +8,8 @@
 */
 int print_char(char *vc)
 {
-	write(1, &vc, 1);
-	return (1);
+write(1, &vc, 1);
+return (1);
 }
 /* end of the function*/
 
@@ -21,27 +21,28 @@ int print_char(char *vc)
 */
 int print_string(char *vp)
 {
-	bp = _strlen(vp); /*bp bytes to print */
+	int bp = 0;
+	bp = _strlen(vp); /*bp bytes a imprimir */
 	write(1, vp, bp);
 	return (bp);
 }
 /* end of the function*/
 
+
 /* beging of funtion print_integer */
 /**
 * print_integer - write a integer in a stdout
-* @vi: integer to print
+* @n: integer to print
 * Return: counter of printed chars
 */
-int print_integer(int vi)
+int print_integer(int n)
 {
-	int size, i = 0, mod = 0;
-	unsigned int num;
-	char number[8], c, sign;
-
+int size, i = 0, mod = 0;
+unsigned int num;
+char numero[8], c;
 	if (n < 0)
 	{
-		[i] = '-';
+		numero[i] = '-';
 		i++;
 		num = -n;
 	}
@@ -49,23 +50,27 @@ int print_integer(int vi)
 	{
 		num = n;
 	}
-	for (; num > 0; i++)
-	{
-		mod = num % 10;
-		number[i] = (char)mod;
-		num /= 10;
-	}
-	size = i;
-	i--;
-	for (; i >= 0; i--)
-	{
-		c = (number[i] + '0');
-		write(1, &c, 1);
-	}
-	return (size);
+
+for (; num > 0 ; i++)
+{
+	mod = num % 10;
+	numero[i] = (char)mod;
+	num /= 10;
+}
+size = i;
+i--;
+for (; i >= 0; i--)
+{
+	c = (numero[i] + '0');
+	write(1, &c, 1);
+}
+return (size);
 }
 /* end of the function*/
+
+
 /* beging of the function _strlen */
+
 /**
 * _strlen - count spaces
 * @s: string
@@ -73,10 +78,9 @@ int print_integer(int vi)
 */
 int _strlen(char *s)
 {
-	int n = 0;
-
-	while (*s++ != '\0')
-		n++;
-	return (n);
+int n = 0;
+while (*s++ != '\0')
+	n++;
+return (n);
 }
 /* end of the function*/
