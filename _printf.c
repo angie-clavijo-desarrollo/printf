@@ -10,41 +10,39 @@ int _printf(const char *format, ...)
 	char c, *vc;
 
 	va_list(arglist);
-
 	if (*format == '\0') /*se valida el string de entrada */
 		return (1);
+		va_start(arglist, format);
 
-	va_start(arglist, format);
-
-	for (; format[i] != '\0'; i++)
+	for ( ; format[i] != '\0'; i++)
 	{
-			if (format[i] == '%')
+		if (format[i] == '%')
+		{
+			++i;
+			if (format[i] == 'd' || format[i] == 'i')
 			{
-				++i;
-				if(format[i] == 'd' || format[i] == 'i')
-				{
-					vp = (va_arg(arglist, int));
-					cprinted += (get_print_int(format[i])(vp));
-				}	
-				else if (format[i] == 's' || format[i] == 'c')
-				{
-					vc = (va_arg(arglist, char *));
-					cprinted += (get_print_char(format[i])(vc));
-				}
-				else
-				{
-					c = format[i - 1];
-					write(1, &c, 1);
-					cprinted++;
-					--i;
-				}
+				vp = (va_arg(arglist, int));
+				cprinted += (get_print_int(format[i])(vp));
+			}
+			else if (format[i] == 's' || format[i] == 'c' || format[i] == '%')
+			{
+				vc = (va_arg(arglist, char *));
+				cprinted += (get_print_char(format[i])(vc));
 			}
 			else
 			{
-				c = format[i];
+				c = format[i - 1];
 				write(1, &c, 1);
 				cprinted++;
+				--i;
 			}
+		}
+		else
+		{
+			c = format[i];
+			write(1, &c, 1);
+			cprinted++;
+		}
 	}
 	va_end(arglist);
 return (cprinted);
