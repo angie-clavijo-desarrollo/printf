@@ -39,7 +39,7 @@ int print_integer(int n)
 {
 	int size = 0, i = 0, mod = 0;
 	unsigned int num;
-	char numero[8], c;
+	char numero[12], c;
 	char sign;
 
 	if (n < 0)
@@ -57,7 +57,7 @@ int print_integer(int n)
 
 	for (; num > 0; i++)
 	{
-		mod = num % 10;
+		mod = num % 10; 
 		numero[i] = (char)mod;
 		num /= 10;
 	}
@@ -72,8 +72,8 @@ int print_integer(int n)
 }
 /* end of the function*/
 
-/* beging of the function _strlen */
 
+/* beging of the function _strlen */
 /**
 * _strlen - count spaces
 * @s: string
@@ -81,10 +81,13 @@ int print_integer(int n)
 */
 int _strlen(char *s)
 {
-	int n = 0;
+	int n = 0, i = 0;
 
-	while (*s++ != '\0')
+	while (s[i] != '\0')
+	{
 		n++;
+		i++;
+	}
 	return (n);
 }
 /* end of the function*/
