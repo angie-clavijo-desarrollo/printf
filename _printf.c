@@ -25,18 +25,19 @@ int _printf(const char *format, ...)
 				{
 					vp = (va_arg(arglist, int));
 					cprinted += (get_print_int(format[i])(vp));
-					i++;
 				}	
 				else if (format[i] == 's' || format[i] == 'c')
 				{
 					vc = (va_arg(arglist, char *));
 					cprinted += (get_print_char(format[i])(vc));
-					i++;
 				}
 			}
-			c = format[i];
-			write(1, &c, 1);
-			cprinted++;
+			else
+			{
+				c = format[i];
+				write(1, &c, 1);
+				cprinted++;
+			}
 	}
 	va_end(arglist);
 return (cprinted);
