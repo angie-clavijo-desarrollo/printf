@@ -21,35 +21,35 @@ int print_string(char *vp);
 /*funtion to print numbers */
 int print_integer(int vi);
 
-
 /* funtion to obtain  identifier funtion */
 int (*get_print_int(char))(int);
 
 /* funtion to obtain  identifier funtion */
 int (*get_print_char(char))(char *);
 
+/* funtion to write a percent in stdout */
+int print_percent(char *s);
 
 /**
- * struct_print  - Struct  to print
- * @idnetifier: The  identifier
+ * struct identchar  - Struct  to print
+ * @op: The  identifier a operator
  * @f: The function associated
  */
-typedef  struct identchar
+typedef struct identchar
 {
 	char op;
 	int (*f)(char *);
 } i_char;
 
-
 /**
- * struct_print  - Struct  to print
- * @idnetifier: The  identifier
+ * struct identinteger  - Struct  to print
+ * @op: The  identifier a operator
  * @f: The function associated
  */
-typedef  struct identinteger
+typedef struct identinteger
 {
-        char op;
-        int (*f)(int);
+	char op;
+	int (*f)(int);
 } i_int;
 
 #endif
