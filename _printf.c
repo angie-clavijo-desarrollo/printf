@@ -6,31 +6,38 @@
  */
 int _printf(const char *format, ...)
 {
-	int bp, vi, cprinted = 0, vc;
-	void *vp;
-	char *copy; /* se declara una variable como copia de la cadena a imprimir */
-	va_list(argumentos);
+	int cprinted = 0, vp, i = 0;
+	char c, *vc;
+
+	va_list(arglist);
+
 	if (*format == '\0') /*se valida el string de entrada */
 		return (1);
-	copy = (char *)format; /* se copia la direccion de la cadena de entrada */
-	va_start(argumentos, format);
-	for (; *copy != '\0'; copy++)
-	{
-		if (*copy == '%')
-		{
-			++copy;
-				cprinted += (get_print_func(*copy)(va_arg(argumentos, int));
-		}
-		write(1, copy, 1);
-		cprinted++;
-	}
-	va_end(argumentos);
-	return (cprinted);
-}
 
-int main(void)
-{
-	_printf("String:[%s]\n", "I am a string !");
-	printf("String:[%s]\n", "I am a string !");
-	return (0);
+	va_start(arglist, format);
+
+	for (; format[i] != '\0'; i++)
+	{
+			if (format[i] == '%')
+			{
+				++i;
+				if(format[i] == 'd' || format[i] == 'i')
+				{
+					vp = (va_arg(arglist, int));
+					cprinted += (get_print_int(format[i])(vp));
+					i++;
+				}	
+				else if (format[i] == 's' || format[i] == 'c')
+				{
+					vc = (va_arg(arglist, char *));
+					cprinted += (get_print_char(format[i])(vc));
+					i++;
+				}
+			}
+			c = format[i];
+			write(1, &c, 1);
+			cprinted++;
+	}
+	va_end(arglist);
+return (cprinted);
 }
