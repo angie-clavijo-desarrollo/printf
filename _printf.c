@@ -6,8 +6,8 @@
  */
 int _printf(const char *format, ...)
 {
-	int cprinted = 0, vp, i = 0;
-	char c, *vc;
+	int cprinted = 0, vp = 0, i = 0;
+	char c, *vc = NULL;
 
 	va_list(arglist);
 	if (*format == '\0') /*se valida el string de entrada */
@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 				vp = (va_arg(arglist, int));
 				cprinted += (get_print_int(format[i])(vp));
 			}
-			else if (format[i] == 's' || format[i] == 'c' || format[i] == '%')
+			else if (format[i] == 's' || format[i] == 'c')
 			{
 				vc = (va_arg(arglist, char *));
 				cprinted += (get_print_char(format[i])(vc));
@@ -34,7 +34,6 @@ int _printf(const char *format, ...)
 				c = format[i - 1];
 				write(1, &c, 1);
 				cprinted++;
-				--i;
 			}
 		}
 		else

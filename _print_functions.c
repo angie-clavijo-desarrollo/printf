@@ -1,5 +1,6 @@
 #include "holberton.h"
 
+
 /* beging of the function print_char */
 /**
 * print_char - write a char in a stdout
@@ -42,11 +43,16 @@ int print_integer(int n)
 	char numero[12], c;
 	char sign;
 
+	if (n == 0)
+	{
+		write(1, &n, 4);
+		return (0);
+	}
 	if (n < 0)
 	{
 		sign = '-';
 		size += 1;
-		numero[i] = sign;
+		/*numero[i] = sign;*/
 		num = -n;
 		write(1, &sign, 1);
 	}
@@ -57,7 +63,7 @@ int print_integer(int n)
 
 	for (; num > 0; i++)
 	{
-		mod = num % 10; 
+		mod = num % 10;
 		numero[i] = (char)mod;
 		num /= 10;
 	}
@@ -91,17 +97,3 @@ int _strlen(char *s)
 	return (n);
 }
 /* end of the function*/
-
-/**
-* print_percent - write a percent sign in stdout
-* @s: always void
-* Return: number of printed chars
-*/
-int print_percent(char *s)
-{
-	char c = '%';
-
-	(void)s; 
-	write(1, &c, 1);
-	return (1);
-}
