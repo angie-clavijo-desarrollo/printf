@@ -31,6 +31,13 @@ int _printf(const char *format, ...)
 					vc = (va_arg(arglist, char *));
 					cprinted += (get_print_char(format[i])(vc));
 				}
+				else
+				{
+					c = format[i - 1];
+					write(1, &c, 1);
+					cprinted++;
+					--i;
+				}
 			}
 			else
 			{
