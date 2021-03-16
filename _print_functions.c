@@ -37,7 +37,7 @@ int print_string(char *vp)
 */
 int print_integer(int n)
 {
-	int size, i = 0, mod = 0;
+	int size = 0, i = 0, mod = 0;
 	unsigned int num;
 	char numero[8], c;
 	char sign;
@@ -98,6 +98,7 @@ int print_percent(char *s)
 {
 	char c = '%';
 
+	(void)s; 
 	write(1, &c, 1);
 	return (1);
 }
