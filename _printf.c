@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			++i;
-			if (format[i] == 'd' || format[i] == 'i' )
+			if (format[i] == 'd' || format[i] == 'i')
 				cprinted += (get_print_int(format[i])((va_arg(arglist, int))));
 			else if (format[i] == 's' || format[i] == 'c' || format[i] == 'R'
 					|| format[i] == '%' || format[i] == 'r')
