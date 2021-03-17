@@ -100,7 +100,7 @@ int _strlen(char *s)
 
 /* beging of the function print_percent */
 /**
-* print_percent - write a char in a stdout
+* print_percent - write a percent in a stdout
 * @vc: entry character
 * Return: counter of printed chars
 */
