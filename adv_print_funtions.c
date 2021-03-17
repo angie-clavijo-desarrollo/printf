@@ -51,8 +51,7 @@ int rot13(char *rot13)
 			}
 		}
 	}
-	j += 1;
-	return (j);
+	return (i);
 }
 
 /**
