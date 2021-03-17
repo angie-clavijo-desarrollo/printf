@@ -1,69 +1,69 @@
-printf - C
+# README, Printf! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
 
-This proyect show the basic way how it works, the printf function.
+<p align= "center">
+<h2>Description</h2>
+This repository show the basic way how it works, the ```printf```  function.
+We have done this function, making out whith differents own cases. 
+We are going to evaluate this cases:
 
-WHAT WE EXPECTING TO SEE
-We have done this function, making out whit our own cases. We are going to evaluate this cases:
+<ul>
+<li>When the users need to print characters, strings, integers, decimals and characters special.</li>
+<li>If you need to convert your print data to an binary, octal, hexadecimal in uppercase and hexadecimal in lowercase.</li>
+<ul>
 
-- When the users need to print characters, strings, integers or decimals.
-- If you need to convert your print data to an binary, octal, hexadecimal in uppercase and hexadecimal in lowercase.
-
-PRE-REQUIREMENTS 📋
-You need to download this whole library, whit the support files to use this function in a correct way.
-
-INSTALATION 🔧
-So You can clone this repositori and you have to use the header in your program.
-
-#include "holberton.h"
-
-<<<<<<< HEAD
-<hr>
-
-### Requirements  📦
-Agrega notas adicionales sobre como hacer deploy
 
 <hr>
 
-### Autores ✒️
-Luis Mejia <a href="https://twitter.com/Lemmishmaniasis"><img height="30">
-<src>https://github.com/lemejiamo</src></a>
-Angui Clavijo<a href="https://twitter.com/anguiclavijods"><img height="30">
-<src>https://github.com/angie-clavijo-desarrollo</src></a>
-Edher Ramirez <a href="https://twitter.com/edhe_r"><img height="30">
-<src>https://github.com/Edheramirez</src></a>
-=======
+### Pre-requirements 📋
+You need have:
+<ul>
+<li>Allowed editors: vi, vim, emacs<li>
+<li>All your files will be compiled on Ubuntu 14.04 LTS</li>
+<li>The files have style Betty style</li>
+<li>The files and Functions will be compiled whtih **gcc 4.8.4  using the flags -Wall -Werror -Wextra and -pedantic**</li>
+</ul>
+
+<hr>
+
+### Example  📦
+
+```#include "holberton.h"
+/**
+*main - Entry point
+*Return: (0) succes
+*/
 int main (void)
 {
-	_printf("you can print %i and %s and %c", 69, "s[:)]", ".");
-}
+	_printf("you can print %i and %s and %c", 69, "s[:)]", ".")/* print string, an argument list type integer, and argument type char, and special characters /;
+    return (0);
+}```
 
-BUGS⚙️
-Now, there are some issues(for now), you can´t print a NULL character,
+<hr>
 
-TEST WE DID end-to-end 🔩
+### Instalation 🔧
+So You can clone this repository and you have to use the header in your program.
+
+```#include "holberton.h"```
 
 
-Da un ejemplo
-Y las pruebas de estilo de codificación ⌨️
-Explica que verifican estas pruebas y por qué
+<hr>
 
-Da un ejemplo
-xDespliegue 📦
-Agrega notas adicionales sobre como hacer deploy
-
-We built this 🛠️
+### We built this 🛠️
 We use Vim, Emacs, in power shell and vagrant to develop this function.
 
-Peers 🖇️
-Luis Mejia.
-Angui Clavijo.
-Edher Ramirez.
+<hr>
 
->>>>>>> 87adcc7b3853bdb358bf3312917ce255162a2cbf
+### Peers ✒️
+Luis Mejia <a href="https://twitter.com/Lemmishmaniasis"><a>
+<a href=https://github.com/lemejiamo>lemejiamo</a>
 
-Expresiones de Gratitud 🎁
-Comenta a otros sobre este proyecto 📢
-Invita una cerveza 🍺 o un café ☕ a alguien del equipo.
-Da las gracias públicamente 🤓.
-etc.
-⌨️ con ❤️ por Villanuevand 😊
+Angui Clavijo<a href="https://twitter.com/anguiclavijods"><a>
+<a href="https://github.com/angie-clavijo-desarrollo">angie-clavijo-desarrollo</a>
+
+Edher Ramirez <a href="https://twitter.com/edhe_r">@Edhe_r</a>
+<a href="https://github.com/Edheramirez">Edheramirez</a>
+
+Holberton School Colombia
+Cohort 14 🤓
+Bog-0121 😊
+</p>
