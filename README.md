@@ -9,8 +9,8 @@
 ##### We are going to evaluate this cases:
 
 <ul>
-<li>When the users need to print characters, strings, integers, decimals and characters special.<li>
-<li>If you need to convert your print data to an binary, octal, hexadecimal in uppercase and hexadecimal in lowercase.<li>
+<li>When the users need to print characters, strings, integers, decimals and characters special<li>
+<li>If you need to convert your print data to an binary, octal, hexadecimal in uppercase and hexadecimal in lowercase<li>
 <ul>
 
 Pre-requirements 📋
