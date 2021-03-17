@@ -1,11 +1,8 @@
 # README, Printf! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
- 
 
-## printf - C
-
+<p align= "center">
+<h2>Description</h2>
 This proyect show the basic way how it works, the printf function.
-
-### WHAT WE EXPECTING TO SEE
 We have done this function, making out whith differents own cases. 
 We are going to evaluate this cases:
 
@@ -76,3 +73,4 @@ Invita una cerveza 🍺 o un café ☕ a alguien del equipo.
 Da las gracias públicamente 🤓.
 etc.
 ⌨️ con ❤️ por Villanuevand 😊
+</p>
