@@ -1,13 +1,13 @@
 #include "holberton.h"
 /**
- * _printf - voy a llorar nuestro primer proyecto en grupo
- * @format: puntero a la cadena a imprimir en pantalla
+ * _printf - simple funtion to write chars in stdout
+ * @format: string to write
  * Return: integer
  */
 int _printf(const char *format, ...)
 {
 	int cprinted = 0,  i = 0;
-	char  *vc = NULL;
+	char *vc = NULL;
 
 	va_list(arglist);
 	if (*format == '\0') /*se valida el string de entrada */
@@ -24,10 +24,9 @@ int _printf(const char *format, ...)
 		{
 			++i;
 			if (format[i] == 'd' || format[i] == 'i')
-			{
-				cprinted += (get_print_int(format[i])((va_arg(arglist, int))));
-			}
-			else if (format[i] == 's' || format[i] == 'c' || format[i] == '%')
+					cprinted += (get_print_int(format[i])((va_arg(arglist, int))));
+			
+			else if (format[i] == 's' || format[i] == 'c' || format[i] == '%' || format[i] == 'R')
 			{
 				if (format[i] == '%')
 					cprinted += (get_print_char(format[i])(vc));
