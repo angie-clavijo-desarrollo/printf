@@ -97,3 +97,17 @@ int _strlen(char *s)
 	return (n);
 }
 /* end of the function*/
+
+/* beging of the function print_percent */
+/**
+* print_char - write a char in a stdout
+* @vc: entry character
+* Return: counter of printed chars
+*/
+int print_percent(char *vc)
+{
+	char c = '%';
+	(void)vc;
+	write(1, &c, 1);
+	return (1);
+}
