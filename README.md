@@ -1,12 +1,10 @@
-@import "colors.css";
+# README Project Printf    
 
-```css # README Project Printf ```
-
-```css ## printf - C```
+## printf - C
 
 This proyect show the basic way how it works, the printf function.
 
-```css ### WHAT WE EXPECTING TO SEE```
+### WHAT WE EXPECTING TO SEE
 We have done this function, making out whith differents own cases. 
 We are going to evaluate this cases:
 
@@ -15,12 +13,12 @@ We are going to evaluate this cases:
 <li>If you need to convert your print data to an binary, octal, hexadecimal in uppercase and hexadecimal in lowercase.</li>
 <ul>
 
-```css ### Pre-requirements 📋```
+### Pre-requirements 📋
 You need to download this library called holberton.h with the support files. Example
 
 __*holberton.h*__
 
-```css ### Instalación 🔧 ```
+### Instalación 🔧
 Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose
 
 Dí cómo será ese paso
@@ -42,10 +40,10 @@ Y las pruebas de estilo de codificación ⌨️
 Explica que verifican estas pruebas y por qué
 
 Da un ejemplo
-```css ### Despliegue 📦```
+### Despliegue 📦
 Agrega notas adicionales sobre como hacer deploy
 
-```### Construido con 🛠️```
+### Construido con 🛠️
 Menciona las herramientas que utilizaste para crear tu proyecto
 
 Dropwizard - El framework web usado
@@ -60,7 +58,7 @@ Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra Wiki
 Versionado 📌
 Usamos SemVer para el versionado. Para todas las versiones disponibles, mira los tags en este repositorio.
 
-```### Autores ✒️```
+### Autores ✒️
 Luis Mejia.
 Angui Clavijo.
 Edher Ramirez.
