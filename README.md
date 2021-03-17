@@ -22,13 +22,18 @@ You need to download this library called holberton.h with the support files. Exa
 __*holberton.h*__
 
 <hr>
+
 ### Requirements  📦
 Agrega notas adicionales sobre como hacer deploy
 
 <hr>
+
 ### Autores ✒️
-Luis Mejia <a href="" src=""><a>
-Angui Clavijo
-Edher Ramirez
+Luis Mejia <a href="https://twitter.com/Lemmishmaniasis"><img height="30">
+<src>https://github.com/lemejiamo</src></a>
+Angui Clavijo<a href="https://twitter.com/anguiclavijods"><img height="30">
+<src>https://github.com/angie-clavijo-desarrollo</src></a>
+Edher Ramirez <a href="https://twitter.com/edhe_r"><img height="30">
+<src>https://github.com/Edheramirez</src></a>
 
 </p>
