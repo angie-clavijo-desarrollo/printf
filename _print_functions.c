@@ -150,3 +150,31 @@ char new[] = "nNoOpPqQrRsStTuUvVwWxXyYzZaAbBcCdDeEfFgGhHiIjJkKlLmM";
 j += 1;
 return (j);
 }
+
+/**
+ * reverse_array - that says everything
+ * @a: array to reverse
+ * @n: size of array
+ * Return: writed chars
+ */
+int reverse_array(char *a)
+{
+    int i, len;
+   
+    i = 0;
+    len = 0;
+
+    if (!a)
+        return (0);
+    while (a[i] != '\0')
+    {
+        len++;
+        i++;
+    }
+    for (i = len - 1; i >= 0; i--)
+    {
+        write(1, &a[i],1);
+    }
+    return (len);
+}
+
