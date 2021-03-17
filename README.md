@@ -2,7 +2,7 @@
 
 <p align= "center">
 <h2>Description</h2>
-This repository show the basic way how it works, the [printf] function.
+This repository show the basic way how it works, the `printf` function.
 We have done this function, making out whith differents own cases. 
 We are going to evaluate this cases:
 
