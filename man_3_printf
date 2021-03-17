@@ -1,0 +1,58 @@
+.TH _PRINTF 1 2021-15-03 GNU
+.SH NAME
+_printf \- print function
+
+.SH SYNOPSYS
+.B
+_printf("string %c and if you want %s", argu1, argu2);
+
+.SH DESCRIPTION
+.B _printf
+Print ARGUMENT(s) according to FORMAT, or execute according to OPTION.
+
+.SH OPTIONS
+[\fB%c\fR]
+[\fB%s\fR]
+[\fB%i\fR]
+[\fB%d\fR]
+
+.TP
+.BR \-h ", " \-? ", " \-\-help
+Give´s you some information can help you.
+.TP
+.BR \-v ", " \-\-version
+Show you the version datestamp.
+.TP
+.BR %c
+If you need to print one character.
+.TP
+.BR %s
+If you need to print an string.
+.TP
+.BR %i
+If you need to print an integer.
+.TP
+.BR %d
+If you need to print a decimal base 10.
+.SH FILES
+you need the files:
+_print_functions.c
+_printf.c
+get_print_func.c
+holberton.h
+.SH USE MODE
+#include "holberton.h"
+.TP
+int main(void)
+.TP
+.BR {
+.TP
+.BR	_printf("you can print %i and %s and %c",\ 56,\ "s[:)]",\ ".");
+.TP
+.BR }
+.SH BUGS
+You can´t print NULL chars, 
+.SH AUTOR
+Luis Mejia-first developer.
+Angui Clavijo-leader manager.
+Edher Ramirez-lead reserch.
