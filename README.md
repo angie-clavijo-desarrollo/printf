@@ -27,16 +27,19 @@ You need have:
 
 ### Example  📦
 
-```#include "holberton.h"
+```
+#include "holberton.h"
 /**
 *main - Entry point
 *Return: (0) succes
 */
 int main (void)
 {
-	_printf("you can print %i and %s and %c", 69, "s[:)]", ".")/* print string, an argument list type integer, and argument type char, and special characters /;
+	_printf("you can print %i and %s and %c", 69, "s[:)]", ".")
+    /* print string, an argument list type integer, and argument type char, and special characters /;
     return (0);
-}```
+}
+```
 
 <hr>
 
@@ -54,13 +57,22 @@ We use Vim, Emacs, in power shell and vagrant to develop this function.
 <hr>
 
 ### Peers ✒️
-Luis Mejia <a href="https://twitter.com/Lemmishmaniasis"><a>
+Luis Mejia 
+
+<a href="https://twitter.com/Lemmishmaniasis">@Lemmishmaniasis<a>
+
 <a href=https://github.com/lemejiamo>lemejiamo</a>
 
-Angui Clavijo<a href="https://twitter.com/anguiclavijods"><a>
+Angui Clavijo
+
+<a href="https://twitter.com/anguiclavijods">@anguiclavijods<a>
+
 <a href="https://github.com/angie-clavijo-desarrollo">angie-clavijo-desarrollo</a>
 
-Edher Ramirez <a href="https://twitter.com/edhe_r">@Edhe_r</a>
+Edher Ramirez 
+
+<a href="https://twitter.com/edhe_r">@Edhe_r</a>
+
 <a href="https://github.com/Edheramirez">Edheramirez</a>
 
 Holberton School Colombia
