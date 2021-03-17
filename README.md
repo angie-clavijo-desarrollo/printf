@@ -1,3 +1,5 @@
+@import "colors.css";
+
 ```css # README Project Printf ```
 
 ```css ## printf - C```
