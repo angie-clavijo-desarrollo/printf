@@ -32,6 +32,7 @@ int (*get_print_char(char s))(char *z)
 	i_char list[] = {
 		{'s', print_string},
 		{'c', print_char},
+		{'%', print_percent},
 	};
 	int i = 0;
 
