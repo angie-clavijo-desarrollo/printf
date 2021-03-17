@@ -34,6 +34,7 @@ int rot13(char *rot13);
 
 int reverse_array(char *a);
 
+int _is_alpha(char c);
 /**
  * struct identchar  - Struct  to print
  * @op: The  identifier a operator
