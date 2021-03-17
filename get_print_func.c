@@ -33,7 +33,9 @@ int (*get_print_char(char s))(char *z)
 		{'s', print_string},
 		{'c', print_char},
 		{'%', print_percent},
-	};
+		{'R', rot13},
+		{'r', reverse_array},
+		};
 	int i = 0;
 
 	while (list[i].op != '\0')

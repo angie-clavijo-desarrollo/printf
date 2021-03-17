@@ -30,6 +30,10 @@ int (*get_print_char(char))(char *);
 /* funtion to write a percent in stdout */
 int print_percent(char *s);
 
+int rot13(char *rot13);
+
+int reverse_array(char *a);
+
 /**
  * struct identchar  - Struct  to print
  * @op: The  identifier a operator
