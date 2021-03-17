@@ -1,4 +1,5 @@
-# README Project Printf    
+# README, Printf! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
+ 
 
 ## printf - C
 
@@ -59,9 +60,9 @@ Versionado 📌
 Usamos SemVer para el versionado. Para todas las versiones disponibles, mira los tags en este repositorio.
 
 ### Autores ✒️
-Luis Mejia.
-Angui Clavijo.
-Edher Ramirez.
+Luis Mejia
+Angui Clavijo
+Edher Ramirez
 
 - Trabajo Inicial - Fulanito Detal - Documentación.
 También puedes mirar la lista de todos los contribuyentes quíenes han participado en este proyecto.
