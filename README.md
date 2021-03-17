@@ -1,12 +1,17 @@
-printf - C
+# README Project Printf    
 
-This proyect show the basic way how it works, the printf function.
+## printf - C
 
-WHAT WE EXPECTING TO SEE
-We have done this function, making out whit our own ccases. We are going to evaluate this cases:
+##### This proyect show the basic way how it works, the printf function.
 
-- When the users need to print characters, strings, integers or decimals.
-- If you need to convert your print data to an binary, octal, hexadecimal in uppercase and hexadecimal in lowercase.
+### WHAT WE EXPECTING TO SEE
+##### We have done this function, making out whith differents own cases. 
+##### We are going to evaluate this cases:
+
+<ul>
+<li>When the users need to print characters, strings, integers, decimals and characters special.<li>
+<li>If you need to convert your print data to an binary, octal, hexadecimal in uppercase and hexadecimal in lowercase.<li>
+<ul>
 
 Pre-requirements 📋
 You need to download this whole library, whit the support files.
