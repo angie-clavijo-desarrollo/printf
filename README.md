@@ -2,7 +2,7 @@
 
 <p align= "center">
 <h2>Description</h2>
-This proyect show the basic way how it works, the printf function.
+This repository show the basic way how it works, the [printf] function.
 We have done this function, making out whith differents own cases. 
 We are going to evaluate this cases:
 
@@ -10,6 +10,8 @@ We are going to evaluate this cases:
 <li>When the users need to print characters, strings, integers, decimals and characters special.</li>
 <li>If you need to convert your print data to an binary, octal, hexadecimal in uppercase and hexadecimal in lowercase.</li>
 <ul>
+
+<hr>
 
 ### Pre-requirements 📋
 You need to download this library called holberton.h with the support files. Example
@@ -56,8 +58,9 @@ Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra Wiki
 Versionado 📌
 Usamos SemVer para el versionado. Para todas las versiones disponibles, mira los tags en este repositorio.
 
+<hr>
 ### Autores ✒️
-Luis Mejia
+Luis Mejia <a href="" src=""><a>
 Angui Clavijo
 Edher Ramirez
 
